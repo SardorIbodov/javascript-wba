@@ -27,3 +27,7 @@
 // console.log(a);
 // console.log(edit(a));
 // console.log(a);
+
+// console.log([1,2,3] == [1,2,3]); // false
+
+// console.log(isNaN("String")); // true
