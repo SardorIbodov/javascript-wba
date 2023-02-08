@@ -33,7 +33,7 @@
 // salariesArr.forEach(element => {
 // 	sortedSalaries[element[0]] = element[1];
 // })
-// console.log(sortealaries);
+// console.log(sortedSalaries);
 
 // 4
 // let menu = {
