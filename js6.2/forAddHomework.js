@@ -73,7 +73,7 @@
 // };
 // console.log(searchValue(obj));
 
-// 6 => return the objects which age > 18
+// 6 => return the sum of ages
 // let user = {
 //   id: 1,
 //   name: "Odil",
@@ -93,19 +93,23 @@
 //     { id: 3, name: "Umar", age: 54 },
 //   ],
 // };
-// let getAdult = obj => {
-// 	let adultsObj = {};
-// 	let i = 0;
-// 	while(obj) {
-// 		if(obj.age > 18) {
-// 			adultsObj[i] = obj;
-// 			i++;
+// let sumAge = (obj) => {
+// 	let sumArr = 0;
+//   while (obj) {
+//     if(Array.isArray(obj)) {
+// 			obj.forEach(element => {
+// 				sumArr += element.age;
+// 			})
+// 		}
+// 		else {
+// 			sumArr+= obj.age;
 // 		}
 // 		obj = obj.children;
-// 	}
-// 	return adultsObj;
-// }
-// console.log(getAdult(user));
+//   }
+// 	return sumArr;
+// };
+
+// console.log(sumAge(user));
 
 // 7 => return the objects that has "job" key
 // let arr = [
@@ -180,4 +184,88 @@
 // }
 // console.log(isCorrectAge(obj));
 
+// 12 => existsBranch()
+// let student = {
+// 	name: "Sardor",
+// 	locationCentre: "Qarshi"
+// }
+// let existsBranch = obj => {
+// 	const branches = ['Andijon','Namangan','Qarshi','Toshkent'];
+// 	let isHere = false;
+// 	branches.forEach(element => {
+// 		(element === obj.locationCentre) ? isHere = true : isHere
+// 	})
+// 	if(isHere) return `Fialimiz mavjud`
+// 	else return `Uzr, bu hududda filialimiz yo'q!!!`
+// }
+// console.log(existsBranch(student));
+
+// 13 => registration
+// let arr = [
+// 	{ id: 3, name: "Usmon", parol: "1231" },
+// 	{ id: 1, name: "Umar", parol: "1241" },
+// 	{ id: 5, name: "Jasur", parol: "3452" },
+// 	{ id: 2, name: "Asmo", parol: "2312" },
+// 	{ id: 4, name: "Salohiddin", parol: "3421" },
+// ];
+// let registration = (obj) => {
+// 	let isSuccess = false;
+// 	arr.forEach(element => {
+// 		element.name === obj.name && element.parol === obj.parol ?
+// 		isSuccess = true :
+// 		isSuccess;
+// 	})
+// 	if(isSuccess) return `Xush kelibsiz`;
+// 	else return `Login yoki parol xato!!!`;
+// };
+// console.log(registration({name: "Jasur", parol: "3452"}));
+
+// 14 => existsChild()
+// let obj={
+//   id:1,
+//   title:'the best',
+//   address:{street:"Farobiy",number:'34'}
+// }
+// let existsObject = object => {
+// 	for(let key in object) {
+// 		if(typeof object[key] === "object" && !Array.isArray(object[key]) && object[key] !== null) {
+// 			return `Ichma-ich object mavjud`
+// 		}
+// 	}
+// 	return `Ichma-ich object mavjud emas!!!`
+// }
+// console.log(existsObject(obj));
+
+// 15 => person
+// let person = {
+//   id: 1,
+//   name: "Umar",
+//   surname: "Ismoilov",
+// };
+// 1
+// let addIelts = (value, object) => {
+//   object.ielts = value;
+//   return object;
+// };
+// console.log(addIelts(6, person));
+// 2
+// let isAppropriate = (object) => {
+//   if (object.ielts >= 5.5) {
+//     object.student = true;
+//     return object;
+//   } else return `Qayta topshiring!`;
+// };
+// console.log(isAppropriate(person));
+// 3
+// let createRandomKey = (object) => {
+//   for (let key in object) {
+//     if (key === "student") {
+//       let randomKey = parseInt(Math.random() * 100);
+//       let randomValue = parseInt(Math.random() * 100);
+//       object[randomKey] = randomValue;
+//     }
+//   }
+//   return object;
+// };
+// console.log(createRandomKey(person));
 

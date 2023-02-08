@@ -1,1 +1,2 @@
 1) Object creations => Object.create(null)
+2) Array.sort()
