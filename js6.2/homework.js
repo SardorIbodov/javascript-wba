@@ -45,16 +45,14 @@
 // ladder.showStep(); // 0
 
 // 4
+// let obj = {};
 // function A() {
-//   this.name = "Sardor", 
-// 	this.age = 19;
+// 	return obj;
 // }
 // function B() {
-//   return new A();
+// 	return obj;
 // }
-
 // let a = new A();
 // let b = new B();
-// console.log(a);
-// console.log(b);
+
 // console.log(a === b);
