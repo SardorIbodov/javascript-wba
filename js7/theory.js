@@ -37,5 +37,80 @@
 // console.log(number.toString(8)); // "15"
 // console.log(number.toString(16)); // "d"
 
+// isNaN()
+// console.log(isNaN(null)); // false
+// console.log(isNaN(undefined)); // true
+// console.log(isNaN("0")); // false
+// console.log(isNaN(+"3 * 4")); // true
+// console.log(isNaN(5 + null)); // false
+// console.log(isNaN(5 + undefined)); // true
 
+// Object.is() => same as "==="
+// console.log(Object.is("salom", "salom"));
+// console.log(Object.is(2, 2));
+
+// toPrecision()
+// let num1 = 1.23456789;
+// let num2 = 0.0002003456789;
+// console.log(num1.toPrecision(5));
+// console.log(num2.toPrecision(5));
+
+// Math
+// Math.PI => 3.1415....
+// console.log(Math.PI); // 3.1415...
+
+// Math.abs() => modul
+// console.log(Math.abs(-10)); // 10
+// console.log(Math.abs(10)); // 10
+
+// Math.round()
+// console.log(Math.round(2.51)); // 3
+// console.log(Math.round(2.49)); // 2
+// console.log(Math.round(-2.51)); // -3
+// console.log(Math.round(-2.49)); // -2
+
+// Math.floor()
+// console.log(Math.floor(2.99)); // 2
+// console.log(Math.floor(2.01)); // 2
+// console.log(Math.floor(-2.99)); // -3
+// console.log(Math.floor(-2.01)); // -3
+
+// Math.ceil()
+// console.log(Math.ceil(2.51)); // 3
+// console.log(Math.ceil(2.49)); // 3
+// console.log(Math.ceil(-2.51)); // -2
+// console.log(Math.ceil(-2.49)); // -2
+
+// Math.trunc()
+// console.log(Math.trunc(2.51)); // 2
+// console.log(Math.trunc(2.49)); // 2
+// console.log(Math.trunc(-2.51)); // -2
+// console.log(Math.trunc(-2.49)); // -2
+
+// Math.random()
+// console.log(Math.random());
+// console.log(Math.random() * 10); [0 - 10)
+
+// Math.min()
+// console.log(Math.min(1,8,2,5,7,6,93,4,85,58,2,4,31)); // 1
+
+// Math.max()
+// console.log(Math.max(1,8,2,5,7,6,93,4,85,58,2,4,31)); // 93
+
+// Math.pow()
+// console.log(Math.pow(5,3)); // 125
+
+// Math.sqrt()
+// console.log(Math.sqrt(9)); // 3
+
+// Math.cbrt()
+// console.log(Math.cbrt(27)); // 3
+
+// Math.sign()
+// console.log(Math.sign(12)); // 1
+// console.log(Math.sign(-12)); // -1
+// console.log(Math.sign(0)); // 0
+// console.log(Math.sign(-0)); // -0
+// console.log(Math.sign("12")); // 1
+// console.log(Math.sign("-12")); // -1
 
