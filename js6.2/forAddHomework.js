@@ -93,20 +93,55 @@
 //     { id: 3, name: "Umar", age: 54 },
 //   ],
 // };
-// let sumAge = (obj) => {
-// 	let sumArr = 0;
-//   while (obj) {
-//     if(Array.isArray(obj)) {
-// 			obj.forEach(element => {
-// 				sumArr += element.age;
-// 			})
-// 		}
-// 		else {
-// 			sumArr+= obj.age;
-// 		}
-// 		obj = obj.children;
+
+// let res = [];
+// const getAge = (user) => {
+//   if (user.age > 18) {
+//     res.push(user);
 //   }
-// 	return sumArr;
+//   if (Array.isArray(user.children)) {
+//     user.children.forEach((element) => {
+//       if (element.age > 18) {
+//         res.push(element);
+//       }
+//       if (element.children) getAge(element);
+//     });
+//   }
+// };
+
+// getAge(user);
+// console.log(res);
+
+// let sumAge = (obj) => {
+//   let result = {};
+//   let i = 1;
+//   while (obj) {
+//     if (Array.isArray(obj)) {
+//       obj.forEach((element) => {
+// 				if(Array.isArray(element)) {
+// 					element.forEach(item => {
+// 						if(item.age > 18) {
+// 							result[i] = item;
+// 						}
+// 						++i;
+// 					})
+// 				}
+// 				else {
+// 					if (element.age > 18) {
+// 						result[i] = element;
+// 						++i;
+// 					}
+// 				}
+//       });
+//     } else {
+//       if (obj.age > 18) {
+//         result[i] = obj;
+// 				++i;
+// 			}
+//     }
+//     obj = obj.children;
+//   }
+//   return result;
 // };
 
 // console.log(sumAge(user));
