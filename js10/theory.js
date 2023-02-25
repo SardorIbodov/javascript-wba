@@ -158,7 +158,7 @@
 // let res = num.fill(3, 3, 4);
 // console.log(res); // [1, 2, 34, 3, 22, 45,  0]
 
-// copyWithin
+// copyWithin()
 // let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // let result = num.copyWithin(0, 3, 6);
 // console.log(result); // [4, 5, 6, 4, 5, 6, 7, 8, 9]

@@ -1,3 +1,37 @@
+let webbrain = {
+  frontend: [
+    { course: "react", price: 120 },
+    { course: "vue", price: 110 },
+    { course: "angular", price: 100 },
+  ],
+  backend: [
+    { course: "java", price: 120 },
+    { course: "php", price: 110 },
+    { course: "nodejs", price: 100 },
+  ],
+  mobile: {
+    android: [
+      { course: "android", price: 120 },
+      { course: "flutter", price: 110 },
+    ],
+    ios: [
+      { course: "ios", price: 120 },
+      { course: "flutter", price: 110 },
+    ],
+  },
+};
+
+let sum = 0;
+const sumPrice = obj => {
+	for(let key in obj) {
+		if(Array.isArray(obj[key])) {
+			obj[key].forEach(v => sum += v.price)
+		} else sumPrice(obj[key])
+	}
+	return sum;
+}
+console.log(sumPrice(webbrain));
+
 // Array ichida sonlar yig'indisini toping
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 // const calcSum = (arr) =>
@@ -81,10 +115,10 @@
 // const before2000 = arr => arr.filter(v => v.year < 2000);
 // console.log(before2000(users));
 
-// 2000 ~ 2010 
+// 2000 ~ 2010
 // const between0010 = arr => arr.filter(v => v.year >= 2000 && v.year <= 2010);
 // console.log(between0010(users));
 
-// 2010 ~ 2020 
+// 2010 ~ 2020
 // const between1022 = arr => arr.filter(v => v.year >= 2010 && v.year <= 2022);
 // console.log(between1022(users));
