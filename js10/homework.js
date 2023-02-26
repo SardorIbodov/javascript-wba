@@ -20,7 +20,6 @@ let webbrain = {
     ],
   },
 };
-
 let sum = 0;
 const sumPrice = obj => {
 	for(let key in obj) {
