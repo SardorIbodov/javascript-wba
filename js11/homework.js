@@ -1,22 +1,22 @@
-const array = [3, 8, 14, 5, 19, 25];
-// array ichidan maximal sonni aniqlaydigan funksiya
-const max = (arr) => {
-  return arr.reduce((current, value) => {
-    return current > value ? current : value;
-  }, 0);
-};
-const task = (arr) => {
-  if (arr.length <= 1) {
-    return arr;
-  } else {
-    let m1 = max(arr); // Eng katta son
-    arr.splice(arr.indexOf(m1), 1);
-    let m2 = max(arr); // Eng katta sondan bitta kichik son
-    arr.splice(arr.indexOf(m2), 1);
-    if (m1 - m2 !== 0) arr.push(m1 - m2);
-    return task(arr);
-  }
-};
+// const array = [3, 8, 14, 5, 19, 25];
+// // array ichidan maximal sonni aniqlaydigan funksiya
+// const max = (arr) => {
+//   return arr.reduce((current, value) => {
+//     return current > value ? current : value;
+//   }, 0);
+// };
+// const task = (arr) => {
+//   if (arr.length <= 1) {
+//     return arr;
+//   } else {
+//     let m1 = max(arr); // Eng katta son
+//     arr.splice(arr.indexOf(m1), 1);
+//     let m2 = max(arr); // Eng katta sondan bitta kichik son
+//     arr.splice(arr.indexOf(m2), 1);
+//     if (m1 - m2 !== 0) arr.push(m1 - m2);
+//     return task(arr);
+//   }
+// };
 
 // string
 // berilgan stringda nechta kichik harf, nechta katta harf borligini toping
@@ -110,3 +110,70 @@ const task = (arr) => {
 //   return result;
 // };
 // console.log(zipString("webbraaiiin"));
+
+// object keylarini toping
+// const getKeys = object => Object.keys(object);
+// console.log(getKeys({name: "Sardor", age: 19}));
+
+// objectdagi age key larini yig'indisini toping
+// let obj = {
+//   title: "webbrain",
+//   age: 2,
+//   child: {
+//     age: 4,
+//     name: "Webbrain",
+//     child: {
+//       age: 3,
+//     },
+//   },
+// };
+// let sum = 0;
+// const sumAge = (object) => {
+//   if (object) {
+//     sum += object.age;
+// 		sumAge(object.child);
+//   }
+// 	return sum;
+// };
+// console.log(sumAge(obj));
+
+// boolean tipidagi ma'lumotlarni qaytaring
+// let obj = {
+//   id: 1,
+//   name: "Webbrain",
+//   offline: true,
+//   online: true,
+//   individual: false,
+// };
+// const getBool = (object) => {
+//   let result = {};
+//   for (let key in object) {
+//     if (typeof object[key] === "boolean") result[key] = object[key];
+//   }
+//   return result;
+// };
+// console.log(getBool(obj));
+
+// Array
+// remove duplicates
+// let arr = [2, 3, 5, 3, 2, 3, 6, 8, 7, 6];
+// const removeDupticates = arr => arr.filter((v, i) => arr.indexOf(v) === i)
+// console.log(removeDupticates(arr));
+// const removeDuplicates = arr => {
+// 	let result = [];
+// 	arr.forEach(v => result.includes(v) ? v : result.push(v))
+// 	return result;
+// }
+// console.log(removeDuplicates(arr));
+
+// arraylarni taqqoslang
+// let arr1 = (arr2 = [1, 2, 3]);
+// const isEqual = (arr1, arr2) => {
+// 	return arr1.join("") === arr2.join("") ? `Teng` : `Teng emas`;
+// }
+// console.log(isEqual(arr1, arr2));
+
+// arraydagi 2 xonali sonlarni chiqaring
+// let arr = [1, 64, 8, 27, 64, 125, 14, 9.99, 99.999, 100.99];
+// const getTwo = array => array.filter(v => Math.floor(v / 10) >= 1 && Math.floor(v / 10) < 10);
+// console.log(getTwo(arr));
