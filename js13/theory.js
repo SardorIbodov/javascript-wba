@@ -88,7 +88,7 @@
 
 // map = null;
 
-// let weakMap = WeakMap([
+// let weakMap = new WeakMap([
 // 	["name", "Sardor"],
 // 	["age", 19],
 // 	["isMarried", false],
@@ -96,4 +96,4 @@
 
 // weakMap = null;
 // We can not clear the value of map/set in heap if we use new Map()/Set();
-// If we use WeakMap()/WeakSet(), it will be deleted automatically
+// If we use new WeakMap()/WeakSet(), it will be deleted automatically
