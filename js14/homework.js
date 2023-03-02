@@ -25,4 +25,3 @@ const fibonacciOtherWay = (n) => {
         return fibonacciOtherWay(n - 1);
     }
 }
-console.log(fibonacciOtherWay(10));
