@@ -145,14 +145,25 @@ const moment = (relativeDate, relativeFormat) => {
       let result;
       switch (string) {
         case "day": {
-          result = `${this.hour} ${this.hour > 1 ? "hours" : "hour"} ago`;
+          if (this.minute >= 30) {
+            result = `${this.hour + 1} ${
+              this.hour + 1 > 1 ? "hours" : "hour"
+            } ago`;
+          } else {
+            result = `${this.hour} ${this.hour > 1 ? "hours" : "hour"} ago`;
+          }
           break;
         }
         case "hour": {
-          result = `${this.minute} ${
-            this.minute > 1 ? "minutes" : "minute"
-          } ago`;
-          break;
+          if (this.second >= 30) {
+            result = `${this.minute + 1} ${
+              this.minute + 1 > 1 ? "minutes" : "minute"
+            } ago`;
+          } else {
+            result = `${this.minute} ${
+              this.minute > 1 ? "minutes" : "minute"
+            } ago`;
+          }
         }
       }
       return {
@@ -166,9 +177,15 @@ const moment = (relativeDate, relativeFormat) => {
       let result;
       switch (string) {
         case "day": {
-          result = `in ${24 - this.hour} ${
-            24 - this.hour > 1 ? "hours" : "hour"
-          }`;
+          if (this.minute >= 30) {
+            result = `in ${24 - this.hour - 1} ${
+              24 - this.hour - 1 > 1 ? "hours" : "hour"
+            }`;
+          } else {
+            result = `in ${24 - this.hour} ${
+              24 - this.hour > 1 ? "hours" : "hour"
+            }`;
+          }
         }
       }
       return {
@@ -179,17 +196,12 @@ const moment = (relativeDate, relativeFormat) => {
     },
 
     fromNow() {
-      let yearDifference = this.year - +relativeDate.slice(0, 4);
-      let monthDifference = this.monthNumber + 1 - +relativeDate.slice(4, 6);
-      let dateDifference = this.currentDate - +relativeDate.slice(-2);
-      let isFullYear = monthDifference > -6;
-      let isCurrentYear = yearDifference === 0;
-      isCurrentYear;
-      return isCurrentYear
-        ? ``
-        : `${isFullYear ? yearDifference : yearDifference - 1} ${
-            yearDifference > 1 ? "years" : "year"
-          } ago`;
+      let relative = +relativeDate.slice(0, 4) * 12 + +relativeDate.slice(4, 6);
+      let current = this.year * 12 + this.monthNumber + 1;
+      let difference = Math.round((current - relative) / 12);
+      return `${difference > 0 ? difference : difference * -1} ${
+        difference > 1 && difference < -1 ? "years" : "year"
+      } ${difference > 0 ? "ago" : "later"}`;
     },
   };
 };
