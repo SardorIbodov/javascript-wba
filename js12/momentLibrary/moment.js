@@ -1,4 +1,4 @@
-const moment = () => {
+const moment = (relativeDate, relativeFormat) => {
   let date = new Date();
   let monthNames = [
     "January",
@@ -140,6 +140,56 @@ const moment = () => {
         }
       }
     },
+
+    startOf(string) {
+      let result;
+      switch (string) {
+        case "day": {
+          result = `${this.hour} ${this.hour > 1 ? "hours" : "hour"} ago`;
+          break;
+        }
+        case "hour": {
+          result = `${this.minute} ${
+            this.minute > 1 ? "minutes" : "minute"
+          } ago`;
+          break;
+        }
+      }
+      return {
+        fromNow() {
+          return result;
+        },
+      };
+    },
+
+    endOf(string) {
+      let result;
+      switch (string) {
+        case "day": {
+          result = `in ${24 - this.hour} ${
+            24 - this.hour > 1 ? "hours" : "hour"
+          }`;
+        }
+      }
+      return {
+        fromNow() {
+          return result;
+        },
+      };
+    },
+
+    fromNow() {
+      let yearDifference = this.year - +relativeDate.slice(0, 4);
+      let monthDifference = this.monthNumber + 1 - +relativeDate.slice(4, 6);
+      let dateDifference = this.currentDate - +relativeDate.slice(-2);
+      let isFullYear = monthDifference > -6;
+      let isCurrentYear = yearDifference === 0;
+      isCurrentYear;
+      return isCurrentYear
+        ? ``
+        : `${isFullYear ? yearDifference : yearDifference - 1} ${
+            yearDifference > 1 ? "years" : "year"
+          } ago`;
+    },
   };
 };
-console.log(moment().format());
