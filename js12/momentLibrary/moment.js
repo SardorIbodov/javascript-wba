@@ -18,6 +18,7 @@ const moment = (relativeDate, relativeFormat) => {
     "Sunday",
     "Monday",
     "Tuesday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
@@ -203,5 +204,40 @@ const moment = (relativeDate, relativeFormat) => {
         difference > 1 && difference < -1 ? "years" : "year"
       } ${difference > 0 ? "ago" : "later"}`;
     },
+
+    add(count, timeName) {
+      let dayCount;
+      switch (timeName) {
+        case "days":
+          {
+            if (count === 1) dayCount = "Tomorrow";
+            if (count > 1 && count < 7) {
+              if (count + this.day > 1 && count + this.day < 7)
+                dayCount = dayNames[count + this.day];
+              else if (count + this.day === 7) dayCount = "Sunday";
+              else if (count + this.day > 7 && count + this.day < 14)
+                dayCount = `Next ${dayNames[count + this.day - 7]}`;
+              else if (count + this.day === 14) dayCount = "Next Sunday";
+            }
+          }
+          let AMorPM;
+          if (this.hour <= 11) AMorPM = "AM";
+          else AMorPM = "PM";
+          if (count <= 7) {
+            dayCount = `${dayCount} at ${
+              this.hour > 10 ? this.hour : "0" + this.hour
+            }:${
+              this.minute > 10 ? this.minute : "0" + this.minute
+            } ${AMorPM}`;
+          }
+      }
+      return {
+        calendar() {
+          return dayCount;
+        },
+      };
+    },
   };
 };
+
+console.log(moment().add(6, "days").calendar());
