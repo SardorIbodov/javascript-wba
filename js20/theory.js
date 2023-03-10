@@ -1,4 +1,4 @@
-//* Object.getOwnPropertyDescriptor(object, key), Object,defineProperty(object, key, {})
+//* Object.getOwnPropertyDescriptor(object, key), Object.defineProperty(object, key, {})
 // let user = {
 //   name: "webbrain",
 //   title: "IT center",
