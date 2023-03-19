@@ -111,7 +111,7 @@
 // console.log(generator.next());
 
 //! extra
-// function* Generator(param) {
+// function* Generator() {
 //   let i = 0;
 //   while (true) {
 //     let gn = yield ++i;
