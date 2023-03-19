@@ -32,5 +32,12 @@
 // }
 // console.log(some("Assalomu")(" alaykum")(" aziz")(" o'quvchilar"));
  
-
+//! Infinite curry function
+// function multiply(a) {
+// 	return function(b) {
+// 		if(b) return multiply(a * b);
+// 		return a;
+// 	}
+// }
+// console.log(multiply(2)(3)(4)(5)());
 
