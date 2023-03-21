@@ -8,7 +8,7 @@
 // Agar raqam bilan raqam bo'lmagan orasida arifmetik amal bajarilsa unda natija NaN(not a number) chiqadi!!!
 
 // Number Contructor -> raqamga aylantiradi
-// console.log(Number(b)); // 1 -> number
+// console.log(Number(b)); // 1.8 -> number
 // console.log(Number(c)); // NaN
  
 // Number.parseInt(), parseInt() 
