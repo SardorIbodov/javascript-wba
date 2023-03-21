@@ -2,7 +2,7 @@
 // if ("0") {
 //   console.log("hello");
 // }
-// "0" -> true, answer: "hello"
+// "0" => true, answer: "hello"
 
 // 2
 // let value = -19;
