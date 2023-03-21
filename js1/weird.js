@@ -1,7 +1,7 @@
 // Here are some weird things in JS
 
 // 1
-// console.log([] ==! []); // true
+// console.log([] !== []); // true
 
 // 2
 // console.log(null === 0); // false
