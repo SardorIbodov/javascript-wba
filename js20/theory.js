@@ -31,7 +31,7 @@
 // user.founded = 2019;
 // console.log(user);
 
-//* Object.seal(object)
+//* Object.seal(object) => we just can edit an existing key
 // let user = {
 //   name: "webbrain",
 //   title: "IT center",
@@ -42,7 +42,7 @@
 // user.founded = 2019;
 // console.log(user);
 
-//* Object.freeze(object)
+//* Object.freeze(object) => we cannot do anything with this object
 // let user = {
 //   name: "webbrain",
 //   title: "IT center",
