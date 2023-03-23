@@ -71,7 +71,7 @@
 // console.log(string instanceof Object);
 // console.log(string instanceof String);
 
-//! mixins
+//! mixins => it is a process, assigning object to prototype of class
 // class Users {
 // 	getName() {
 // 		console.log("From Users class");
