@@ -50,11 +50,12 @@
 
 //! usage of generator function
 // function* idGenerator() {
-//   let i = 0;
+//   let i = users.length;
 //   while (true) {
-//     yield ++i;
+//     yield i++;
 //   }
 // }
+// let generator = idGenerator();
 // let users = [
 //   { id: 1, name: "Eshmat1" },
 //   { id: 2, name: "Eshmat2" },
@@ -65,7 +66,7 @@
 //   { id: 7, name: "Eshmat7" },
 // ];
 // const addUser = (name) => {
-//   users = [...users, { id: users.length + 1, name: name }];
+//   users = [...users, { id: generator.next().value + 1, name: name }];
 // };
 // const deleteUser = (id) => {
 //   users = users.filter((v) => v.id !== id);
@@ -125,3 +126,19 @@
 // console.log(generator.next());
 // console.log(generator.next());
 // console.log(generator.next());
+
+// function* Generator() {
+// 	while(true) {
+// 		let string = yield + "!";
+// 		console.log(string);
+// 	}
+// }
+// let generator = Generator();
+// generator.next();
+// generator.next("salom");
+// generator.next("xayr");
+// generator.next("hi");
+// generator.next("hey");
+// generator.next("bye");
+// generator.next("love");
+// generator.next("reject");
