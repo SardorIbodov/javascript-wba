@@ -27,7 +27,7 @@
 // console.log(user._stir);
 // console.log(proxy._stir);
 
-//! get(target, property, value, receiver)
+//! set(target, property, value, receiver)
 // let user = {
 //   name: "webbrain",
 //   _stir: 123456,
