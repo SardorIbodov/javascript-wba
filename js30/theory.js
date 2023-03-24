@@ -59,6 +59,13 @@
 // uch.innerText = "<p>Link</p>";
 // uch.textContent = "<p>Link</p>";
 
+//! Difference between them
+// console.log(list.innerHTML);
+// console.log(list.innerText);
+// console.log(list.textContent);
+
 //! hidden
 // uch.hidden = true;
 // uch.hidden = false;
+
+
