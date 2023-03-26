@@ -1,0 +1,23 @@
+.parent,
+.content,
+.text {
+  overflow: auto;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  margin-top: 20px;
+  /* white-space: nowrap; */
+}
+
+#border {
+  border: 3px solid red;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.circle {
+  border-radius: 50%;
+}
