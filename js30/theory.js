@@ -60,9 +60,9 @@
 // uch.textContent = "<p>Link</p>";
 
 //! Difference between them
-// console.log(list.innerHTML);
-// console.log(list.innerText);
-// console.log(list.textContent);
+// console.log(list.innerHTML); // returns all text and element with spaces
+// console.log(list.innerText); // returns all text without spaces
+// console.log(list.textContent); // returns all text with spaces
 
 //! hidden
 // uch.hidden = true;
