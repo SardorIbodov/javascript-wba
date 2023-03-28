@@ -121,3 +121,13 @@
 //! getBoundingClientRect()
 // let parent = document.querySelector(".parent");
 // console.log(parent.getBoundingClientRect());
+
+//! appendChild() vs append()
+// let div = document.createElement("div");
+// let p = document.createElement("p");
+// div.append(p, "some", "text");
+// console.log(div);
+
+// let q = document.getElementsByTagName("li");
+// let g = document.querySelectorAll("li");
+// console.log(q, g);
