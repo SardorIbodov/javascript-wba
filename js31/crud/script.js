@@ -1,3 +1,4 @@
+//! CRUD
 const allElements = document.querySelector("*");
 allElements.style.cssText = `
 	margin: 0;
