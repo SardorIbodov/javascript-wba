@@ -1,0 +1,27 @@
+.grand {
+  width: 200px;
+  height: 200px;
+  border: 4px solid red;
+}
+
+.parent {
+  width: 100px;
+  height: 100px;
+  border: 4px solid blue;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  border: 4px solid green;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+}
+
+.highlited {
+  color: white;
+  background-color: red;
+}
