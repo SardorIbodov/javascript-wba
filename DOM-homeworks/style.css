@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Container style */
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Dropdown styles */
+
+.dropdown {
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.dropdown_title {
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown_icon {
+  transition: 0.25s;
+  color: green;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.dropdown_list {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.hide {
+  display: none;
+}
+
+/* ---------- */
+
+/* Article  */
+
+.article {
+  max-width: 800px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.article_box {
+  padding: 40px 50px;
+  border: 4px solid black;
+  text-align: justify;
+  position: relative;
+}
+
+.article_icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ---------- */
+
+/* Slider  */
+.slider {
+  width: 800px;
+  margin: 50px auto;
+}
+
+.slider_content {
+  width: 100%;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+
+.next_btn,
+.prev_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+}
+
+.next_btn {
+  right: 30px;
+}
+
+.prev_btn {
+  left: 30px;
+}
+
+.slider_image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s all linear;
+  top: 0;
+}
+
+.active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  column-gap: 20px;
+  bottom: 50px;
+  z-index: 2;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+.active {
+  border: none;
+  background-color: green;
+}
+
+/* pitch */
+.pitch {
+  width: 800px;
+  height: 500px;
+  background-image: url("./images/pitch-content/pitch.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto 50px;
+  position: relative;
+}
+
+.ball {
+  width: 70px;
+  border-radius: 50%;
+  background: none;
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+}
